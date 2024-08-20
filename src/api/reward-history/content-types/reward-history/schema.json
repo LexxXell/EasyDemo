@@ -1,0 +1,41 @@
+{
+  "kind": "collectionType",
+  "collectionName": "reward_histories",
+  "info": {
+    "singularName": "reward-history",
+    "pluralName": "reward-histories",
+    "displayName": "RewardHistory",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "user_id": {
+      "type": "biginteger",
+      "required": true
+    },
+    "timestamp": {
+      "type": "biginteger"
+    },
+    "points": {
+      "type": "biginteger"
+    },
+    "origin": {
+      "type": "enumeration",
+      "enum": [
+        "unknown",
+        "manual",
+        "referral",
+        "spin",
+        "telegram",
+        "twitter",
+        "activity",
+        "faucet"
+      ],
+      "default": "unknown",
+      "required": true
+    }
+  }
+}

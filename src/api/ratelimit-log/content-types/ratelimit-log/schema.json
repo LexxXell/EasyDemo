@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "ratelimit_logs",
+  "info": {
+    "singularName": "ratelimit-log",
+    "pluralName": "ratelimit-logs",
+    "displayName": "RatelimitLog",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "endpointName": {
+      "type": "string",
+      "required": true
+    },
+    "lastRequestTimestamp": {
+      "type": "biginteger",
+      "required": true
+    },
+    "userId": {
+      "type": "biginteger",
+      "required": true
+    }
+  }
+}

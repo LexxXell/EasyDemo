@@ -1,0 +1,64 @@
+version: '3'
+
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: always
+    ports:
+      - '1337:1337'
+    volumes:
+      - ./.tmp:/app/.tmp
+      - ./public:/app/public
+    environment:
+      NODE_ENV: production
+      IS_DOCKER: true
+    command: npm run prod-start
+    networks:
+      - my_network
+
+  ethws:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: always
+    environment:
+      NODE_ENV: production
+      IS_DOCKER: true
+    command: npm run prod-start-eth-ws
+    depends_on:
+      - backend
+    networks:
+      - my_network
+
+  sepoliaws:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: always
+    environment:
+      NODE_ENV: production
+      IS_DOCKER: true
+    command: npm run prod-start-sepolia-ws
+    depends_on:
+      - backend
+    networks:
+      - my_network
+
+  easyxws:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: always
+    environment:
+      NODE_ENV: production
+      IS_DOCKER: true
+    command: npm run prod-start-easyx-ws
+    depends_on:
+      - backend
+    networks:
+      - my_network
+
+networks:
+  my_network:

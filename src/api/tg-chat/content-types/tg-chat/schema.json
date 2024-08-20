@@ -1,0 +1,20 @@
+{
+  "kind": "collectionType",
+  "collectionName": "tg_chats",
+  "info": {
+    "singularName": "tg-chat",
+    "pluralName": "tg-chats",
+    "displayName": "tgChat"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "ChatID": {
+      "type": "string",
+      "unique": true,
+      "regex": "^[@-]"
+    }
+  }
+}

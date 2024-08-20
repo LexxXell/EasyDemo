@@ -1,0 +1,39 @@
+{
+  "kind": "collectionType",
+  "collectionName": "invite_tokens",
+  "info": {
+    "singularName": "invite-token",
+    "pluralName": "invite-tokens",
+    "displayName": "InviteToken",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "user": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user"
+    },
+    "token": {
+      "type": "string",
+      "required": true
+    },
+    "usedAt": {
+      "type": "datetime"
+    },
+    "usedBy": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user"
+    },
+    "availableActivations": {
+      "type": "integer",
+      "default": 1,
+      "min": 0,
+      "required": true
+    }
+  }
+}

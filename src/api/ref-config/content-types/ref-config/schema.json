@@ -1,0 +1,28 @@
+{
+  "kind": "singleType",
+  "collectionName": "ref_configs",
+  "info": {
+    "singularName": "ref-config",
+    "pluralName": "ref-configs",
+    "displayName": "Referral Config",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "directReferralRewardPercentage": {
+      "type": "integer",
+      "required": true,
+      "default": 16,
+      "min": 0
+    },
+    "indirectReferralRewardPercentage": {
+      "type": "integer",
+      "required": true,
+      "default": 8,
+      "min": 0
+    }
+  }
+}

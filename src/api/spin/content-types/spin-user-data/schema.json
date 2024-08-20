@@ -1,0 +1,41 @@
+{
+  "kind": "collectionType",
+  "collectionName": "spin_users_data",
+  "info": {
+    "singularName": "spin-user-data",
+    "pluralName": "spin-users-data",
+    "displayName": "SpinUserData",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "user": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user"
+    },
+    "speed": {
+      "type": "float",
+      "min": 0,
+      "required": false,
+      "default": 0
+    },
+    "lastSpinTimestamp": {
+      "type": "biginteger"
+    },
+    "bonusSpins": {
+      "type": "integer",
+      "min": 0,
+      "default": 0,
+      "required": true
+    },
+    "flagFirstSpinReward": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "kind": "collectionType",
+  "collectionName": "invite_token_users_data",
+  "info": {
+    "singularName": "invite-token-user-data",
+    "pluralName": "invite-token-users-data",
+    "displayName": "InviteTokenUserData"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "user": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user"
+    },
+    "availableTokenCount": {
+      "type": "integer"
+    }
+  }
+}

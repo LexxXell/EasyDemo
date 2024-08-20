@@ -1,0 +1,39 @@
+{
+  "kind": "singleType",
+  "collectionName": "telegram_bot_configs",
+  "info": {
+    "singularName": "telegram-bot-config",
+    "pluralName": "telegram-bot-configs",
+    "displayName": "Telegram Bot Config",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "ProjectName": {
+      "type": "string",
+      "required": true,
+      "default": "none"
+    },
+    "ProjectSiteURL": {
+      "type": "string",
+      "required": true
+    },
+    "tg_channels": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::tg-chat.tg-chat"
+    },
+    "tg_groups": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::tg-chat.tg-chat"
+    },
+    "botName": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

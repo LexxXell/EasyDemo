@@ -1,0 +1,49 @@
+successfully_linked_accounts: >
+  ✅ Your accounts have been successfully linked!
+
+error_linked_accounts: >
+  ‼️ Error in account linking process
+
+already_linked_accounts: |
+  You've already linked your Telegram account to your wallet!
+  <code>${wallet}</code>
+
+unregistered: |
+  Hi!
+  The user with your telegram username is not registered.
+  <a href="${link}">Register on ${projectName}</a>, and try again.
+
+register_btn: >
+  Register
+
+welcome: |
+  Hi!
+  Do you want to get ${projectName} points?
+  Subscribe to ${projectName} channels:
+
+subscribe_btn: >
+  Subscribe
+
+subscribed_btn: >
+  Get reward
+
+not_subscribed: >
+  ⚠️ You are not subscribed. Please subscribe to the channel first.
+
+subscribed_reward: >
+  ✅ You're subscribed, and you get ${points} points.
+
+subscribed_group_reward: >
+  ✅ You're subscribed to ${group}, and you get ${points} points.
+
+already_subscribed: >
+  ⚠️ You already get points for subscribing.
+
+join_groups: >
+  You can also join ${projectName} groups:
+
+join_btn: >
+  Join
+
+internal_error: >
+  ‼️ Internal Error

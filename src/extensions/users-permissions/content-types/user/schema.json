@@ -1,0 +1,121 @@
+{
+  "kind": "collectionType",
+  "collectionName": "up_users",
+  "info": {
+    "name": "user",
+    "description": "",
+    "singularName": "user",
+    "pluralName": "users",
+    "displayName": "User"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "username": {
+      "type": "string",
+      "minLength": 3,
+      "unique": true,
+      "configurable": false,
+      "required": true
+    },
+    "email": {
+      "type": "email",
+      "minLength": 6,
+      "configurable": false,
+      "required": true
+    },
+    "provider": {
+      "type": "string",
+      "configurable": false
+    },
+    "password": {
+      "type": "password",
+      "minLength": 6,
+      "configurable": false,
+      "private": true,
+      "searchable": false
+    },
+    "resetPasswordToken": {
+      "type": "string",
+      "configurable": false,
+      "private": true,
+      "searchable": false
+    },
+    "confirmationToken": {
+      "type": "string",
+      "configurable": false,
+      "private": true,
+      "searchable": false
+    },
+    "confirmed": {
+      "type": "boolean",
+      "default": false,
+      "configurable": false
+    },
+    "blocked": {
+      "type": "boolean",
+      "default": false,
+      "configurable": false
+    },
+    "role": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.role",
+      "inversedBy": "users",
+      "configurable": false
+    },
+    "points": {
+      "type": "biginteger"
+    },
+    "avatar": {
+      "type": "string"
+    },
+    "wallet": {
+      "type": "string"
+    },
+    "twitter": {
+      "type": "string"
+    },
+    "telegram_username": {
+      "type": "string",
+      "regex": "^@",
+      "unique": true
+    },
+    "telegram_id": {
+      "type": "string",
+      "unique": true
+    },
+    "tg_channels": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::tg-chat.tg-chat"
+    },
+    "tg_groups": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::tg-chat.tg-chat"
+    },
+    "tgOAuthToken": {
+      "type": "string"
+    },
+    "LastHistoryRequest": {
+      "type": "biginteger",
+      "default": "0"
+    },
+    "ReferrerWallet": {
+      "type": "string"
+    },
+    "referrer": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user"
+    },
+    "name": {
+      "type": "string",
+      "required": false,
+      "minLength": 3,
+      "default": "User"
+    }
+  }
+}

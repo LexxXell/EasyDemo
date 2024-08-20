@@ -1,0 +1,57 @@
+{
+  "name": "easy-x-airdrop",
+  "version": "0.1.0",
+  "private": true,
+  "description": "A Strapi application",
+  "license": "MIT",
+  "author": {
+    "name": "A Strapi developer"
+  },
+  "scripts": {
+    "build": "strapi build",
+    "dev": "NO_SIG_VAL=1 NO_BLOCKCHAIN=1  yarn develop",
+    "develop": "strapi develop",
+    "prod-build": "NODE_ENV=production yarn build",
+    "prod-docker-build": "docker-compose build",
+    "prod-docker-start": "docker-compose up -d",
+    "prod-docker-stop": "docker-compose down",
+    "prod-docker-stop-flush": "docker-compose down -v",
+    "prod-start": "NODE_ENV=production yarn start",
+    "prod-start-easyx-ws": "NODE_ENV=production node dist/src/run-easyx-ws.js",
+    "prod-start-eth-ws": "NODE_ENV=production node dist/src/run-eth-ws.js",
+    "prod-start-sepolia-ws": "NODE_ENV=production node dist/src/run-sepolia-ws.js",
+    "start": "strapi start",
+    "strapi": "strapi"
+  },
+  "dependencies": {
+    "@strapi/plugin-cloud": "4.16.2",
+    "@strapi/plugin-i18n": "4.16.2",
+    "@strapi/plugin-users-permissions": "4.16.2",
+    "@strapi/strapi": "4.16.2",
+    "better-sqlite3": "8.6.0",
+    "dotenv": "^16.4.1",
+    "ethers": "^6.9.2",
+    "pg": "8.8.0",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "react-router-dom": "5.3.4",
+    "styled-components": "5.3.3",
+    "telegraf": "3.39",
+    "telegraf-i18n": "^6.6.0",
+    "twitter-api-sdk": "^1.2.1",
+    "uuid4": "^2.0.3",
+    "web3": "^4.4.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.17",
+    "@types/uuid4": "^2.0.3",
+    "@types/web3": "^1.2.2"
+  },
+  "engines": {
+    "node": ">=18.0.0 <=20.x.x",
+    "npm": ">=6.0.0"
+  },
+  "strapi": {
+    "uuid": "20ae3040-e70e-45a4-87ce-92771539522a"
+  }
+}

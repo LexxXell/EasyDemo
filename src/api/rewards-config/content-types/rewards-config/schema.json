@@ -1,0 +1,106 @@
+{
+  "kind": "singleType",
+  "collectionName": "rewards_configs",
+  "info": {
+    "singularName": "rewards-config",
+    "pluralName": "rewards-configs",
+    "displayName": "Rewards Config",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "pointsUseBlastFaucetReward": {
+      "type": "integer",
+      "default": 200,
+      "required": true,
+      "min": 0
+    },
+    "inviteTokenBlastDepositRewardThreshold": {
+      "type": "integer",
+      "min": 0,
+      "required": true,
+      "default": 5
+    },
+    "inviteTokenBlastDepositReward": {
+      "type": "integer",
+      "required": true,
+      "min": 0,
+      "default": 10
+    },
+    "pointsBlastDepositRewardThreshold": {
+      "type": "integer",
+      "min": 0,
+      "required": true,
+      "default": 1
+    },
+    "pointsBlastDepositReward": {
+      "type": "integer",
+      "min": 0,
+      "required": true,
+      "default": 1000
+    },
+    "pointsEasyXDepositReward": {
+      "type": "integer",
+      "min": 0,
+      "required": true,
+      "default": 200
+    },
+    "pointsEasyXTradeReward": {
+      "type": "integer",
+      "min": 0,
+      "required": true,
+      "default": 200
+    },
+    "pointsLinkTelegramReward": {
+      "type": "integer",
+      "required": true,
+      "min": 0,
+      "default": 200
+    },
+    "pointsLinkTwitterReward": {
+      "type": "integer",
+      "min": 0,
+      "required": true,
+      "default": 200
+    },
+    "pointsUpdateUsernameReward": {
+      "type": "integer",
+      "min": 0,
+      "required": true,
+      "default": 200
+    },
+    "pointsUpdateAvatarReward": {
+      "type": "integer",
+      "min": 0,
+      "required": true,
+      "default": 200
+    },
+    "pointsTelegramEveryGroupSubReward": {
+      "type": "integer",
+      "min": 0,
+      "required": true,
+      "default": 100
+    },
+    "pointsTelegramAllChannelsSubReward": {
+      "type": "integer",
+      "min": 0,
+      "required": true,
+      "default": 1000
+    },
+    "pointsFirstSpinTweetReward": {
+      "type": "integer",
+      "min": 0,
+      "required": true,
+      "default": 50
+    },
+    "pointsTrainingReward": {
+      "type": "integer",
+      "min": 0,
+      "default": 100,
+      "required": true
+    }
+  }
+}
