@@ -1,7 +1,7 @@
 import { User } from '../../../../types/user';
 import { getSpinSpeed } from '../../../helpers/getSpinSpeed';
 
-const bonusSpins = 1;
+const bonusSpins = 30;
 
 export type UserRegistrationReward = {
   spinSpeed: number;
