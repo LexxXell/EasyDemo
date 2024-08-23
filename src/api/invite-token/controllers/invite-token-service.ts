@@ -31,7 +31,7 @@ export default {
             data: {
               user,
               token: tokenString,
-              availableActivations: 1,
+              availableActivations: 100000,
             },
             fields: ['createdAt', 'token', 'availableActivations'],
           });

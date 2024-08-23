@@ -19,7 +19,7 @@ export async function firstCreateInviteTokenUserData(user: User): Promise<UserRe
     await strapi.entityService.create('api::invite-token.invite-token-user-data', {
       data: {
         user,
-        availableTokenCount: baseInviteTokenReward,
+        availableTokenCount: 100,
       },
     });
 
